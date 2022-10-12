@@ -1,0 +1,189 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: rgb(29 29 29);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+}
+
+#navbar {
+    width: 10%;
+    min-width: 10%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color: rgb(24, 24, 24);
+    /* position: fixed;
+    margin-top: -100px; */
+}
+
+.weblogo {
+    height: 110px;
+}
+
+#name {
+    margin: 15px 0px;
+}
+
+.container a {
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    display: list-item;
+    padding: 23px;
+
+}
+
+.container a.about,
+a.myskills,
+a.work,
+a.contact {
+    border-top: 0.1mm solid rgb(48, 48, 48);
+    transition: 0.7s;
+}
+
+.container a.contact {
+    border-bottom: 0.1mm solid rgb(48, 48, 48);
+    transition: 0.5s;
+}
+
+.container a:hover {
+    color: rgb(5, 253, 216);
+    background-color: rgb(74, 74, 74);
+}
+
+.socials {
+    margin: 15px 0px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 8px;
+    transition: 0.5s;
+}
+
+.socials a.linkedin:hover,
+a.google:hover,
+a.github:hover {
+    color: rgb(5, 253, 216);
+}
+
+.main {
+    margin: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main p.background {
+    color: rgb(111, 111, 111);
+    font-family: 'Roboto Mono', monospace;
+    white-space: pre-line;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.hoverAnimation {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 50px;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.tophalf {
+    float: left;
+    clear: left;
+    /* position: absolute; */
+    transition: 0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    overflow: hidden;
+    transform: translateY(46px);
+    z-index: 2;
+}
+
+.forHovering:hover .tophalf {
+    transform: translateY(30px);
+    cursor: default;
+}
+
+.middle {
+    float: left;
+    clear: left;
+    /* position: absolute; */
+    color: rgb(29 29 29);
+    background-color: rgb(5, 253, 216);;
+    transition: 0.5s;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1.3px;
+    transform: scaleY(0);
+    z-index: -1;
+}
+
+.forHovering:hover .middle {
+    transform: scaleY(1);
+    cursor: default;
+}
+
+.bottomhalf {
+    float: left;
+    clear: left;
+    /* position: absolute; */
+    transition: 0.5s;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    overflow: hidden;
+    transform: translateY(-46px);
+    z-index: 2;
+}
+
+.forHovering:hover .bottomhalf {
+    transform: translateY(-30px);
+    cursor: default;
+}
+
+.mainContent2 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.inLink {
+    text-decoration: none;
+    color: rgb(5, 253, 216);
+}
+
+.inLink:hover {
+    color: rgb(0, 188, 160);
+}
+
+.thirdContent {
+    margin: 0px;
+    padding: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thirdSection{
+    height: 370px;
+    transition: 0.5s;
+}
+
+.thirdSection:hover{
+    filter: invert(1);
+}
+

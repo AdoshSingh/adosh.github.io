@@ -1,0 +1,285 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --bar-length: 450px;
+}
+
+body {
+    background-color: rgb(29 29 29);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+}
+
+#navbar {
+    width: 10%;
+    min-width: 10%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color: rgb(24, 24, 24);
+    /* position: fixed;
+    margin-top: -100px; */
+}
+
+.weblogo {
+    height: 110px;
+}
+
+#name {
+    margin: 15px 0px;
+}
+
+.container a {
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    display: list-item;
+    padding: 23px;
+
+}
+
+.container a.about,
+a.myskills,
+a.work,
+a.contact {
+    border-top: 0.1mm solid rgb(48, 48, 48);
+    transition: 0.7s;
+}
+
+.container a.contact {
+    border-bottom: 0.1mm solid rgb(48, 48, 48);
+    transition: 0.5s;
+}
+
+.container a:hover {
+    color: rgb(5, 253, 216);
+    background-color: rgb(74, 74, 74);
+}
+
+.socials {
+    margin: 15px 0px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 8px;
+    transition: 0.5s;
+}
+
+.socials a.linkedin:hover,
+a.google:hover,
+a.github:hover {
+    color: rgb(5, 253, 216);
+}
+
+.main {
+    margin: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* max-width: 40%; */
+}
+
+.main p.background {
+    color: rgb(111, 111, 111);
+    font-family: 'Roboto Mono', monospace;
+    white-space: pre-line;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.hoverAnimation {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 50px;
+}
+
+.tophalf {
+    float: left;
+    clear: left;
+    transition: 0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    overflow: hidden;
+    transform: translateY(46px);
+    z-index: 2;
+}
+
+.forHovering:hover .tophalf {
+    transform: translateY(30px);
+    cursor: default;
+}
+
+.middle {
+    float: left;
+    clear: left;
+    /* position: absolute; */
+    color: rgb(29 29 29);
+    background-color: rgb(5, 253, 216);;
+    transition: 0.5s;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    transform: scaleY(0);
+    z-index: -1;
+}
+
+.forHovering:hover .middle {
+    transform: scaleY(1);
+    cursor: default;
+}
+
+.bottomhalf {
+    float: left;
+    clear: left;
+    transition: 0.5s;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    overflow: hidden;
+    transform: translateY(-46px);
+    z-index: 2;
+}
+
+.forHovering:hover .bottomhalf {
+    transform: translateY(-30px);
+    cursor: default;
+}
+
+.mainContent2 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.inLink {
+    text-decoration: none;
+    color: rgb(5, 253, 216);
+}
+
+.inLink:hover {
+    color: rgb(0, 188, 160);
+}
+
+.thirdContent {
+    background-color: transparent;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10rem;
+}
+
+.skillNo{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 1.1rem 0;
+}
+
+.skillName p{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+}
+
+.bars{
+    display: flex;
+    flex-direction: column;
+}
+
+.baseLine{
+    width: var(--bar-length);
+    height: 0.1rem;
+    /* border: 0.1mm solid rgb(85, 85, 85); */
+    background-color: rgb(85, 85, 85);
+    z-index: 1;
+    transition: 0.2s;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.percentage{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    transition: 0.2s;
+    transform: scaleY(0);
+}
+
+.skillNo:hover .percentage{
+    transform: scaleY(1);
+}
+
+.skillLevel{
+    /* width: calc(var(--bar-length)/1.3);
+    border: 0.2mm solid rgb(5, 253, 216); */
+    height: 0.1rem;
+    z-index: 2;
+    position: absolute;
+    transition: 0.2s;
+}
+
+.skillNo:hover .baseLine, .skillNo:hover .skillLevel{
+    height: 1rem;
+
+}
+
+.level1{
+    width: calc((75*var(--bar-length))/100);
+    background-color: rgb(5, 253, 216);
+}
+
+.level2{
+    width: calc((70*var(--bar-length))/100);
+    background-color: rgb(93, 228, 118);
+}
+
+.level3{
+    width: calc((80*var(--bar-length))/100);
+    background-color: rgb(232,110,178);
+}
+
+.level4{
+    width: calc((60*var(--bar-length))/100);
+    background-color: rgb(118, 50, 255);
+}
+
+.level5{
+    width: calc((50*var(--bar-length))/100);
+    background-color: rgb(255, 50, 50);
+}
+
+.level6{
+    width: calc((90*var(--bar-length))/100);
+    background-color: rgb(50, 77, 255);
+}
+
+.level7{
+    width: calc((77*var(--bar-length))/100);
+    background-color: rgb(254,216,0);
+}
+
+.level8{
+    width: calc((83*var(--bar-length))/100);
+    background-color: rgb(255, 142, 50);
+}
+
+.level9{
+    width: calc((72*var(--bar-length))/100);
+    background-color: rgb(111, 255, 50);
+}
+
